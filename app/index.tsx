@@ -6,8 +6,8 @@ export default function Index(){
     const router = useRouter()
     return(
         <View style={styles.container}>
-            <Text style={styles.MainTitle}> Index Page </Text>
-            <Button title="Button that buttons" onPress={() => router.navigate('/square')}/>
+            <Text style={styles.MainTitle}> login Sucessful! </Text>
+            <Button title="Button that brings you to the home page" onPress={() => router.navigate('/App')}/>
         </View>
     )
 }

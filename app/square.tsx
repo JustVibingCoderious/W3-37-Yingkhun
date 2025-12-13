@@ -7,20 +7,42 @@ export default function Square(){
     const [width, SetWidth] = useState(0)
     const [lenght, SetLenght] = useState(0)
     const [area, SetArea] = useState(0)
-
     const router = useRouter()
+
+    function calSquare(){
+        let result = width * lenght
+        SetArea(result)
+    }
     return(
         <View style={styles.container}>
-            <Text style={styles.MainTitle}> Second Page </Text>
-            <Button title="Button that brings u to the first page" onPress={() => router.navigate('/App')}/>
-            <TextInput 
-            style={styles.TextInput} 
-            placeholder="Input killer"
-            value={width.toString()}
-            onChangeText={(w) => SetWidth(Number(w))}
+            <Text style={styles.MainTitle}> PlaceHolder Page </Text>
+            <Button 
+                title="Button that brings u back to the first page" 
+                onPress={() => router.navigate('/App')}
             />
-            <TextInput style={styles.TextInput} placeholder="Input Goober"/>
-            <TextInput style={styles.TextInput} placeholder="Input lms theme"/>
+            
+            <Text> {width} x {lenght} = {area}</Text>
+
+        <Text style={styles.MainTitle}> |=------------------------------------------=|</Text>
+            <TextInput 
+                value={width.toString()}
+                onChangeText={(w) => SetWidth(Number(w))}
+                style={styles.TextInput} 
+                placeholder="Input killer"
+            />
+            
+            <TextInput
+                value={lenght.toString()}
+                onChangeText={(l) => SetLenght(Number(l))}
+                style={styles.TextInput}
+                placeholder="Input Goober"
+            />
+
+            <Button 
+                title="Button to CLICK" 
+                onPress={(calSquare)}
+            />
+            <Text style={styles.MainTitle}> |=------------------------------------------=|</Text>
         </View>
     )
 }

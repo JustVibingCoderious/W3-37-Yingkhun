@@ -6,9 +6,15 @@ export default function App(){
     const router = useRouter()
     return(
         <View style={styles.container}>
-            <Text style={styles.MainTitle}> First Page </Text>
-            <Button title="Button that brings u to the second page" onPress={() => router.navigate('/square')}/>
+            <Text style={styles.MainTitle}> Home Page </Text>
+            <Text style={styles.MainTitle}>|=---------------------------------------------=|</Text>
+            <Button title="Button that brings u to the PlaceHolder page" onPress={() => router.navigate('/square')}/>
+            <Text style={styles.MainTitle}>|=---------------------------------------------=|</Text>
+            <Button title="Button that calculate Surface Area of a Cylinder" onPress={() => router.navigate('/Page3')}/>
+            <Text style={styles.MainTitle}>|=---------------------------------------------=|</Text>
         </View>
+
+        
     )
 }
 
